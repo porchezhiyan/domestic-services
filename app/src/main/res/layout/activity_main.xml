@@ -10,13 +10,25 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.harshu.jsonparse.MainActivity">
 
+    <Button
+        android:text="CALL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CALL"
+        android:onClick="buttonOnClick"
+        android:layout_marginTop="11dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
     <TextView
-        android:text="mTextView"
+        android:text="the response appears here"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/mtextView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
         android:maxLines="15"
-        android:scrollbars="vertical"/>
+        android:scrollbars="vertical"
+        android:layout_marginBottom="81dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
