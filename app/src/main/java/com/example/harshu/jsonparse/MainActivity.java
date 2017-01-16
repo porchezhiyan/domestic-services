@@ -46,8 +46,6 @@ public class MainActivity extends AppCompatActivity {
         mTextView.setMovementMethod(new ScrollingMovementMethod());
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = "http://zillionthoughts.com/?json=1";
-        //String url = "http://zillionthoughts.com";
-        //VolleySingleton=VolleySingleton.getInstance();
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET,url,(String)null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
@@ -61,25 +59,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         request.setRetryPolicy(poilicy);
-
-
-
-
-
-        /*
-
-        StringRequest stringRequest = new StringRequest(url,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        mTextView.setText("the response is:"+response.substring(0,5500));
-                    }
-                }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        mTextView.setText("that didnt work");
-            }
-        });*/
 
         queue.add(request);
 
